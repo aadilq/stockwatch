@@ -24,6 +24,9 @@ const stockSchema = new mongoose.Schema({
     symbol: String
 });
 
+const Stock = mongoose.model("Stock", stockSchema);
+
+
 
 
 app.listen(PORT, (error) =>{
