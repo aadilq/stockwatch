@@ -37,6 +37,31 @@ app.get("/api/stocks", async (req, res) => {
     
 })
 
+app.post("/api/watchlist", async (req, res) => {
+    try {
+        const{
+            company, 
+            description,
+            initial_price,
+            price_2002,
+            price_2007,
+            symbol, 
+        } = req.body;
+        const stock = new Stock({
+            company, 
+            description,
+            initial_price,
+            price_2002,
+            price_2007,
+            symbol, 
+        });
+        await stock.save();
+        res.json({message: "Stock added to watchlist successfully"});
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({error: "Internal Server Error"})
+    }
+})
 
 app.listen(PORT, (error) =>{
     if(!error)
