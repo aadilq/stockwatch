@@ -61,7 +61,7 @@ app.post("/api/watchlist", async (req, res) => {
         console.error(error);
         res.status(500).json({error: "Internal Server Error"})
     }
-})
+});
 
 app.listen(PORT, (error) =>{
     if(!error)
