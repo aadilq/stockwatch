@@ -4,7 +4,11 @@ const mongoose = require('mongoose');
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
+
 const app = express();
+app.use(cors());
+app.use(bodyParser.json());
+
 const PORT = process.env.PORT;
 
 const URI = process.env.MONGO_DB_URI
