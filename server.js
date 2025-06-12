@@ -27,6 +27,23 @@ const stockSchema = new mongoose.Schema({
 
 const Stock = mongoose.model("Stock", stockSchema);
 
+//Test function to verify if the data exists
+async function testConnection () {
+    try{
+        const count = await Stock.countDocuments();
+        console.log(`Found ${count} documents in the stock collection`);
+
+        //Get a sample document
+        const sample = await Stock.findOne();
+        console.log('Sample document: ', sample);
+    }
+    catch(error){
+        console.error('Error testing connection:', error);
+    }
+}
+
+testConnection();
+
 app.get("/api/stocks", async (req, res) => {
     try {
         const stocks = await Stock.find();
