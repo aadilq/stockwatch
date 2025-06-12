@@ -63,7 +63,7 @@ const Watchlist = ({ watchlist }) => {
 
 	return (
 		<div className="App">
-			<h1>Stock Market MERN App</h1>
+			<h1>Stockwatch</h1>
 			<h2>My Watchlist</h2>
 			<ul>
 				{watchlist.map((stock) => (
@@ -119,3 +119,5 @@ function App(){
     </Router>
   )
 };
+
+export default App;
