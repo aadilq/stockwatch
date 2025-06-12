@@ -25,7 +25,7 @@ const stockSchema = new mongoose.Schema({
     symbol: String
 });
 
-const Stock = mongoose.model("Stock", stockSchema);
+const Stock = mongoose.model("Stock", stockSchema, "stocks");
 
 //Test function to verify if the data exists
 async function testConnection () {
