@@ -1,42 +1,81 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* src/App.css */
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Arial', sans-serif;
+  background-color: #FFE6E1;
+  margin: 0;
+  padding: 0;
+}
+
+.App{
   text-align: center;
+  padding: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h1{
+  color: #1f454d;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2{
+  color: #3c8d93;
+  margin-top: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+ul{
+  list-style-type: None;
+  padding: 0;
 }
 
-.card {
-  padding: 2em;
+li{
+  background-color: #3c8d93;
+  color: #d9d7ca;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.read-the-docs {
-  color: #888;
+button {
+  background-color: #1f454d;
+  color: #d9d7ca;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+button:hover {
+  background-color: #3c8d93;
+}
+
+nav {
+  background-color: #1f454d;
+  padding: 15px 0;
+  width: 100%;
+
+}
+
+nav a {
+  color: #d9d7ca;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #3c8d93;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+
